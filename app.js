@@ -73,7 +73,5 @@ app.use('/', indexRoutes);
 app.use('/campgrounds', campgroundRoutes);
 app.use('/campgrounds/:id/comments', commentRoutes);
 
-// Server Running in port 8080
-app.listen(8080, () => {
-  console.log('Server run in port 8080');
-});
+// Server Running in heroku
+app.listen(port);
