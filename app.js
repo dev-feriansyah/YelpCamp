@@ -20,16 +20,9 @@ const campgroundRoutes = require('./routes/campground'),
  */
 
 // Connect to Database
-
-// LOCAL
-// mongoose.connect(
-//   'mongodb://192.168.1.1/yelp_camp_v10',
-//   { useNewUrlParser: true }
-// );
-
-// REMOTE
+const mongodbURL = process.env.DATABASEURL || 'mongodb://192.168.1.1/yelp_camp_deploy';
 mongoose.connect(
-  'mongodb://feri:feriansyah123@ds033400.mlab.com:33400/yelpcamp',
+  mongodbURL,
   { useNewUrlParser: true }
 );
 
@@ -74,5 +67,5 @@ app.use('/campgrounds', campgroundRoutes);
 app.use('/campgrounds/:id/comments', commentRoutes);
 
 // Server Running in heroku
-app.listen(process.env.PORT);
-// app.listen(8080);
+const appPort = process.env.PORT || 8080;
+app.listen(appPort);
