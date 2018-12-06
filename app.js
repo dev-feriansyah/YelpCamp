@@ -74,4 +74,4 @@ app.use('/campgrounds', campgroundRoutes);
 app.use('/campgrounds/:id/comments', commentRoutes);
 
 // Server Running in heroku
-app.listen(port);
+app.listen(process.env.PORT);
