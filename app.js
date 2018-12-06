@@ -18,10 +18,21 @@ const campgroundRoutes = require('./routes/campground'),
 /**
  * SERVER STARTER CONFIG
  */
+
+// Connect to Database
+
+// LOCAL
+// mongoose.connect(
+//   'mongodb://192.168.1.1/yelp_camp_v10',
+//   { useNewUrlParser: true }
+// );
+
+// REMOTE
 mongoose.connect(
-  'mongodb://192.168.1.1/yelp_camp_v10',
+  'mongodb://feri:feriansyah123@ds033400.mlab.com:33400/yelpcamp',
   { useNewUrlParser: true }
 );
+
 // Run seed.js for removing and adding data to database manually
 // seedDB();
 app.set('view engine', 'ejs');
