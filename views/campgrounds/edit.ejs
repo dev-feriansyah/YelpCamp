@@ -1,0 +1,40 @@
+<% include ../partials/head %>
+<section class="section">
+  <div class="container">
+    <div class="columns is-mobile">
+      <div class="column is-half">
+        <div class="box">
+          <h1 class="title is-4">Edit <%= campground.name %></h1>
+          <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST" class="form">
+            <div class="field">
+              <label for="name" class="label">Name Campground</label>
+              <div class="control">
+                <input type="text" name="campground[name]" placeholder="Name of Campground" class="input" autofocus value="<%= campground.name %>">
+              </div>
+            </div>
+            <div class="field">
+              <label for="image" class="label">Url Campground</label>
+              <div class="control">
+                <input type="text" name="campground[image]" placeholder="Url of Campground" class="input" value="<%= campground.image %>">
+              </div>
+            </div>
+            <div class="field">
+              <label for="desc" class="label">Description</label>
+              <div class="control">
+                <textarea name="campground[description]" id="description" class="textarea" placeholder="Description for Campground"><%= campground.description%></textarea>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <button class="button is-primary is-fullwidth" type="submit">Submit</button>
+              </div>
+            </div>
+            <a href="/campgrounds" class="button is-text">Back to campground page</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<% include ../partials/footer %>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= (typeof pageTitle !== 'undefined') ? pageTitle : 'Yelp Camp Project' %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="/stylesheet/landing.css">
+</head>
+<body>
+  <% include partials/pop-message %>
+
+<header class="hero is-fullheight has-text-centered">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-1 has-text-white">Welcome to Yelp Camp</h1>
+      <a href="/campgrounds" class="button is-large is-primary is-inverted">To the campgrounds page</a>
+    </div>
+  </div>
+</header>
+
+<ul class="slideshow">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+
+<% include partials/footer %>

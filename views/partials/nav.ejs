@@ -1,0 +1,18 @@
+<nav class="navbar is-light">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/campgrounds" class="title navbar-item">YelpCamp</a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <% if(!currentUser) { %>
+          <a href="/register" class="navbar-item">Sign Up</a>
+          <a href="/login" class="navbar-item">Login</a>
+        <% } else { %>
+          <span class="navbar-item">Loggin as <%= currentUser.username %></span>
+          <a href="/logout" class="navbar-item">Logout</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,31 @@
+<% include ../partials/head %>
+<section class="section">
+  <div class="container">
+    <div class="columns is-mobile">
+      <div class="column is-half">
+        <div class="box">
+          <h1 class="title is-4">Add new comment to
+            <%= campground.name %>
+          </h1>
+          <form action="/campgrounds/<%= campground._id %>/comments" method="POST" class="form">
+            <div class="field">
+              <label for="desc" class="label">Comment</label>
+              <div class="control">
+                <textarea name="comment[text]" class="textarea" placeholder="Add your comment"></textarea>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <button class="button is-primary is-fullwidth" type="submit">Submit</button>
+              </div>
+            </div>
+            <a href="/campgrounds/<%= campground._id %>" class="button is-text">Back to
+              <%= campground.name %></a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<% include ../partials/footer %>

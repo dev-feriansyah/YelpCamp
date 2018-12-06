@@ -1,0 +1,16 @@
+<% if(errorMessage && errorMessage.length > 0) { %>
+<div class="pop-up">
+  <div class="notification is-danger">
+    <%= errorMessage %>
+    <span class="delete"></span>
+  </div>
+</div>
+<% } %>
+<% if(successMessage && successMessage.length > 0) { %>
+<div class="pop-up">
+  <div class="notification is-success">
+    <%= successMessage %>
+    <span class="delete"></span>
+  </div>
+</div>
+<% } %>
